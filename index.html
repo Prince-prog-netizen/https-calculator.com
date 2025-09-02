@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Calculator</title>
+    <style>
+    .calculator{
+       height:650px;
+       width: 300px;
+       border: solid;
+       margin-left:300px;
+       margin-top:50px;
+    }
+    #show{
+        height: 55px;
+        width: 200px;
+        border:solid;
+        margin-left:45px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 130%;
+    }
+    .adjust{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .raj{
+        height:85px;
+        width: 85px;
+        margin:3px;
+    }
+
+    </style>
+</head>
+<body>
+<div class="calculator">
+<input type="text" id="show" readonly>
+<div class="adjust">
+<button class="raj" onclick="presentshow='';document.querySelector('#show').value=presentshow;" >AC</button>
+<button class="raj" onclick="presentshow=presentshow +'1';document.querySelector('#show').value=presentshow;">1</button>
+<button class="raj" onclick="presentshow=presentshow +'2';document.querySelector('#show').value=presentshow;">2</button>
+<button class="raj" onclick="presentshow=presentshow +'+';document.querySelector('#show').value=presentshow;">+</button>
+<button class="raj" onclick="presentshow=presentshow +'3';document.querySelector('#show').value=presentshow;">3</button>
+<button class="raj" onclick="presentshow=presentshow +'4';document.querySelector('#show').value=presentshow;">4</button>
+<button class="raj" onclick="presentshow=presentshow +'-';document.querySelector('#show').value=presentshow;">-</button>
+<button class="raj" onclick="presentshow=presentshow +'5';document.querySelector('#show').value=presentshow;">5</button>
+<button class="raj" onclick="presentshow=presentshow +'6';document.querySelector('#show').value=presentshow;">6</button>
+<button class="raj" onclick="presentshow=presentshow +'*';document.querySelector('#show').value=presentshow;">*</button>
+<button class="raj" onclick="presentshow=presentshow +'7';document.querySelector('#show').value=presentshow;">7</button>
+<button class="raj" onclick="presentshow=presentshow +'8';document.querySelector('#show').value=presentshow;">8</button>
+<button class="raj" onclick="presentshow=presentshow +'/';document.querySelector('#show').value=presentshow;">/</button>
+<button class="raj" onclick="presentshow=eval(presentshow);document.querySelector('#show').value=presentshow;">=</button>
+<button class="raj" onclick="presentshow=presentshow +'9';document.querySelector('#show').value=presentshow;">9</button>
+<button class="raj" onclick="presentshow=presentshow +'0';document.querySelector('#show').value=presentshow;">0</button>
+<button class="raj" onclick="presentshow=presentshow +'.';document.querySelector('#show').value=presentshow;">.</button>
+  
+</div>
+</div>
+<script>
+    let presentshow='';
+    document.querySelector('#show').value=presentshow;
+</script>
+</body>
+</html>
